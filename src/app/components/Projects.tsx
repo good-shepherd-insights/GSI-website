@@ -1,0 +1,309 @@
+"use client";
+
+import Magnet from "@/blocks/Animations/Magnet/Magnet";
+
+import ScrollVelocity from "@/blocks/TextAnimations/ScrollVelocity/ScrollVelocity";
+import ShinyText from "@/blocks/TextAnimations/ShinyText/ShinyText";
+
+import {
+  Text,
+  Button,
+  Column,
+  Row,
+  Flex,
+  StatusIndicator,
+  Grid,
+  Card,
+  Media,
+  Tag,
+} from "@once-ui-system/core";
+import { ArrowUpRight } from "lucide-react";
+
+import { Instrument_Serif, Poppins, Inter, Geist_Mono } from "next/font/google";
+import { useEffect, useRef } from "react";
+
+import { IoArrowDownSharp } from "react-icons/io5";
+import gsap from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import React from "react";
+const instrument_serif = Instrument_Serif({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+const poppins = Poppins({
+  weight: ["400", "700", "800", "900", "600", "500", "300", "200", "100"],
+  subsets: ["latin"],
+});
+const inter = Inter({
+  weight: ["400", "700", "800", "900", "600", "500", "300", "200", "100"],
+  subsets: ["latin"],
+});
+
+const geist_mono = Geist_Mono({
+  weight: ["400", "700", "800", "900", "600", "500", "300", "200", "100"],
+  subsets: ["latin"],
+});
+
+export default function Projects() {
+  return (
+    <>
+      {" "}
+      <Column
+        fillWidth
+        style={{
+          minHeight: "100vh",
+          minWidth: "100vw",
+          boxShadow: "inset 0 25px 25px -25px #444444cc",
+        }}
+        vertical="start"
+        horizontal="center"
+        padding="m"
+        paddingX="m"
+        gap="128"
+      >
+        <Text className={geist_mono.className} style={{ fontWeight: "200" }}>
+          {" "}
+          <ScrollVelocity
+            texts={[
+              "",
+              "",
+            ]} // Add companies and trust indicators
+            velocity={30}
+            parallaxStyle={{
+              fontFamily: geist_mono.className,
+              fontSize: "20px",
+              color: "#99FF33",
+              lineHeight: "2.3",
+            }}
+          ></ScrollVelocity>{" "}
+        </Text>
+
+        <Flex
+          center
+          minWidth={48}
+          maxWidth={48}
+          maxHeight={29}
+          minHeight={29}
+          style={{
+            backgroundColor: "#9887FF",
+            boxShadow: "inset 0 25px 25px -25px #1d1d1d",
+            borderRadius: "40px",
+            border: "1.2px solid #999",
+          }}
+        >
+          <Text
+            style={{
+              fontSize: "85px",
+              textAlign: "center",
+              lineHeight: "1.1",
+              fontWeight: "lighter",
+              display: "inline", // Ensure inline
+              whiteSpace: "pre-line", // Preserve line breaks if any
+              color: "#031113",
+            }}
+            className={instrument_serif.className}
+          >
+            Business Development Agency <br/>{" "}
+            <span
+              style={{
+                fontStyle: "italic",
+                display: "inline",
+                fontWeight: 700,
+              }}
+              className={instrument_serif.className}
+            >
+              Frederick, MD
+            </span>
+          </Text>
+        </Flex>
+
+        <Column
+          fillWidth
+          horizontal="center"
+          vertical="start"
+          style={{}}
+          id="projects"
+        >
+          <Text
+            style={{
+              fontSize: "120px",
+              textAlign: "center",
+              lineHeight: "1",
+              fontWeight: "lighter",
+
+              color: "#fff3e8",
+            }}
+            className={instrument_serif.className}
+          >
+            Some selected <br></br>
+            <span
+              style={{
+                fontStyle: "italic",
+                color: "#99FF33",
+              }}
+              className={instrument_serif.className}
+            >
+              Work
+            </span>
+          </Text>
+          <Flex height={3}></Flex>
+          <IoArrowDownSharp
+            color="#99FF33"
+            size={100}
+            fontWeight={10}
+            className="down-arrow"
+          />
+          <Flex height={3}></Flex>
+
+          <Grid columns={2} fitWidth gap="160" marginTop="64">
+            <ProjectCards
+              title="refolio"
+              tags={["Next.js", "Tailwind CSS", "TypeScript"]}
+              description="A modern portfolio website showcasing my work and skills."
+              image="/images/demo.jpg"
+            />
+
+            <ProjectCards
+              title="sigmn."
+              tags={["n8n", "solana", "next.js"]}
+              description="An NFT Marketplace for Artists and Collectors."
+              image="/sigms.webp"
+            />
+          </Grid>
+          <Flex height={3}></Flex>
+          <Magnet magnetStrength={10}>
+            <Button
+              weight="default"
+              size="l"
+              style={{
+                backdropFilter: "blur(10px)",
+                backgroundColor: "#40404066",
+                border: "1px solid #222",
+                overflow: "hidden",
+
+                padding: "27px",
+                borderRadius: "1000px",
+              }}
+              onClick={() =>
+                window.open("https://github.com/goodshepherdinsights", "_blank")
+              }
+            >
+              <Text className={inter.className} style={{ fontSize: "12px" }}>
+                <Row center>
+                  <ShinyText text="AND MORE"></ShinyText>
+                  &nbsp;&nbsp;&nbsp;
+                  <ArrowUpRight size={19} color={"#99FF33"} fontWeight={100} />
+                </Row>
+              </Text>
+            </Button>
+          </Magnet>
+        </Column>
+      </Column>
+    </>
+  );
+}
+
+
+
+type ProjectsProps = {
+  title: string;
+  statusColor?: string;
+  image: string;
+  tags: string[];
+  description: string;
+};
+
+function ProjectCards({
+  title,
+  statusColor = "moss",
+  image,
+  tags,
+  description,
+}: ProjectsProps) {
+  return (
+    <Card
+      direction="column"
+      background="transparent"
+      minWidth={33}
+      maxWidth={33}
+      overflow="hidden"
+      radius="xl-8"
+      border="transparent"
+      gap="16"
+      paddingBottom="32"
+    >
+      <Media
+        src={image}
+        fillWidth
+        aspectRatio="4/3"
+        unoptimized
+        radius="xl-8"
+        objectFit="cover"
+      />
+      <Row fillWidth horizontal="between" paddingX="s">
+        <Text
+          style={{
+            fontSize: "18px",
+            fontWeight: "bold",
+            color: "#FFF3E8",
+            lineHeight: "1.1",
+            textAlign: "left",
+            padding: "0.5rem 1rem",
+            textTransform: "uppercase",
+          }}
+          className={poppins.className}
+        >
+          <Row center>
+            <StatusIndicator color={"moss"}></StatusIndicator>&nbsp;&nbsp;{" "}
+            {title}
+          </Row>
+        </Text>
+        <Row fitWidth gap="8">
+          {tags.map((tag) => (
+            <Tag
+              key={tag}
+              variant="info"
+              fitWidth
+              fitHeight
+              padding="4"
+              background="transparent"
+              style={{
+                padding: "0.6rem 0.6rem",
+                backgroundColor: "transparent",
+                borderColor: "#ffffff26",
+                borderWidth: "1px",
+                borderRadius: "1000px",
+                textTransform: "uppercase",
+              }}
+            >
+              <Text
+                className={poppins.className}
+                style={{
+                  fontSize: "12px",
+                  color: "#ffffff70",
+                  textTransform: "uppercase",
+                }}
+              >
+                {tag}
+              </Text>
+            </Tag>
+          ))}
+        </Row>
+      </Row>
+      <Flex paddingX="s">
+        {" "}
+        <Text
+          className={inter.className}
+          style={{
+            fontSize: "13px",
+            color: "#666",
+          }}
+        >
+          {description}
+        </Text>
+      </Flex>
+    </Card>
+  );
+}
