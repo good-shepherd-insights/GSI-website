@@ -116,6 +116,7 @@ const meta = {
     image: "",
     canonical: "https://goodshepherdinsights.com",
     robots: "index,follow",
+    alternates: [],
   },
   // add more routes and reference them in page.tsx
 };
