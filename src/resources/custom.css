@@ -86,3 +86,335 @@ body {
   animation: arrow-down 1.2s ease-in-out infinite;
 }
 
+/* Mobile Responsive Breakpoints */
+@media (max-width: 768px) {
+  /* Tablet and smaller */
+  body {
+    font-size: 14px;
+  }
+
+  /* Large text scaling */
+  h1, .large-text {
+    font-size: 3rem !important;
+  }
+
+  h2, .medium-text {
+    font-size: 2rem !important;
+  }
+
+  /* Padding adjustments */
+  .responsive-padding {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Container max-width adjustments */
+  .responsive-container {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Hero specific adjustments */
+  .hero-title {
+    font-size: 4rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem !important;
+  }
+
+  /* Projects grid */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Skills bounce cards */
+  .skills-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .bounce-cards-container {
+    width: 80% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .bounce-card-item {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  /* Experience flowing menu */
+  .experience-menu {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Contact form */
+  .contact-form {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  /* Footer layout */
+  .footer-row {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    text-align: center !important;
+  }
+
+  /* Navbar adjustments */
+  .navbar-row {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Scroll text footer */
+  .scroll-text {
+    font-size: 6rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile */
+  body {
+    font-size: 12px;
+  }
+
+  /* Large text scaling */
+  h1, .large-text {
+    font-size: 2.5rem !important;
+  }
+
+  h2, .medium-text {
+    font-size: 1.8rem !important;
+  }
+
+  /* Button scaling */
+  button {
+    min-height: 48px !important; /* Touch target size */
+    padding: 14px 24px !important;
+    font-size: 14px !important;
+  }
+
+  /* Input scaling */
+  input, textarea {
+    min-height: 48px !important; /* Touch target size */
+    font-size: 16px !important; /* Prevent zoom on iOS */
+    padding: 12px !important;
+  }
+
+  /* Grid adjustments */
+  .responsive-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Flex adjustments */
+  .responsive-flex {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  /* Absolute positioned elements */
+  .responsive-absolute {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+
+  /* Hero specific mobile adjustments */
+  .hero-title {
+    font-size: 3rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .hero-button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Projects cards */
+  .project-card {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Skills bounce cards mobile */
+  .bounce-cards-container {
+    width: 90% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .bounce-card-item {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  /* Experience menu mobile */
+  .flowing-menu-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Contact form mobile */
+  .contact-form {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .contact-input {
+    width: 100% !important;
+  }
+
+  /* Footer mobile */
+  .footer-row {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    text-align: center !important;
+  }
+
+  .footer-text {
+    font-size: 12px !important;
+  }
+
+  /* Navbar mobile */
+  .navbar-row {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .navbar-buttons {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  /* Scroll text footer mobile */
+  .scroll-text {
+    font-size: 4rem !important;
+  }
+
+  /* LocoScroll images mobile */
+  .locoscroll-img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  /* Skills component mobile optimizations */
+  .skills-title {
+    font-size: 60px !important;
+    line-height: 1.1 !important;
+  }
+
+  .bounce-cards-container {
+    width: 90% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .custom-bounceCards {
+    width: 250px !important;
+    height: 125px !important;
+  }
+
+  .custom-bounceCards img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .custom-bounceCards .card {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  /* Experience component mobile optimizations */
+  .experience-title {
+    font-size: 60px !important;
+    line-height: 1.1 !important;
+  }
+
+  .flowing-menu-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .flowing-menu-container .menu__item {
+    font-size: 14px !important;
+  }
+
+  .flowing-menu-container .menu__item-desc {
+    font-size: 12px !important;
+  }
+
+  .flowing-menu-container .marquee__img {
+    width: 80px !important;
+    height: 60px !important;
+  }
+
+  .experience-spinning-star {
+    font-size: 80px !important;
+  }
+
+  /* Projects component mobile optimizations */
+  .projects-title {
+    font-size: 60px !important;
+    line-height: 1.1 !important;
+  }
+
+  .projects-agency-text {
+    font-size: 40px !important;
+    line-height: 1.1 !important;
+  }
+
+  .projects-agency-subtitle {
+    font-size: 24px !important;
+    line-height: 1.1 !important;
+  }
+
+  .projects-agency-container {
+    width: 90% !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .project-card {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .projects-section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Footer component mobile optimizations */
+  .footer-text {
+    font-size: 14px !important;
+  }
+
+  .footer-row {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    text-align: center !important;
+  }
+}
+

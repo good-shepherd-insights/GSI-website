@@ -122,6 +122,7 @@ function LocoScrollImg() {
                 opacity: 1,
                 userSelect: "none",
               }}
+              className="locoscroll-img"
               draggable={true}
             />
           );
@@ -210,6 +211,7 @@ function LocoScrollFlatImg() {
                 transition: "opacity 0.3s, transform 0.3s",
                 opacity: 1,
               }}
+              className="locoscroll-img"
               draggable={true}
             />
           );

@@ -239,9 +239,9 @@ export default function Experience() {
                 fontWeight: "lighter",
                 color: "#031113",
               }}
-              className={instrument_serif.className}
+              className={`${instrument_serif.className} large-text`}
             >
-              
+
               <br />
               <span
                 style={{
@@ -269,7 +269,7 @@ export default function Experience() {
             className="down-arrow"
           />
           <Flex height={3}></Flex>
-          <Flex style={{ paddingInline: "13vw" }} fillWidth>
+          <Flex style={{ paddingInline: "13vw" }} fillWidth className="flowing-menu-container">
             <FlowingMenu items={demoItems} disableHover={true} />
           </Flex>
           <Flex fitHeight center fillWidth paddingY="s">
@@ -289,7 +289,7 @@ export default function Experience() {
             </span>{" "}
           </Flex>
 
-          <Flex style={{ paddingInline: "13vw" }} fillWidth>
+          <Flex style={{ paddingInline: "13vw" }} fillWidth className="flowing-menu-container">
             <FlowingMenu items={eduItems} disableHover={true}/>
           </Flex>
         </Column>

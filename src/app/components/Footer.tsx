@@ -147,7 +147,7 @@ export default function Footer() {
               />  */}
           </div>
           <Text
-            className={geist_mono.className}
+            className={`${geist_mono.className} footer-text`}
             style={{
               color: '#999',
               fontSize: '20px',
@@ -200,10 +200,11 @@ export default function Footer() {
               justifyContent: 'space-between',
               padding: '0 2vw',
             }}
+            className="footer-row"
           >
             <Row gap="8" center>
               <Text
-                className={geist_mono.className}
+                className={`${geist_mono.className} footer-text`}
                 style={{
                   fontSize: '12px',
                   color: '#999',
@@ -215,7 +216,7 @@ export default function Footer() {
             </Row>
             <Column center>
               <Text
-                className={geist_mono.className}
+                className={`${geist_mono.className} footer-text`}
                 style={{
                   fontSize: '13px',
                   color: '#999',
@@ -230,7 +231,7 @@ export default function Footer() {
             </Column>
             <Column center>
               <Text
-                className={geist_mono.className}
+                className={`${geist_mono.className} footer-text`}
                 style={{
                   fontSize: '13px',
                   color: '#999',

@@ -61,56 +61,57 @@ export default function Navbar() {
           right: 0,
           zIndex: 1000,
         }}
+        className="navbar-row"
       >
-        <Row gap="16">
-          {" "}
-          <Button
-            weight="default"
-            size="l"
-            style={{
-              backdropFilter: "blur(10px)",
-              backgroundColor: "#08151666",
-              border: "1px solid #222",
-              overflow: "hidden",
-            }}
-            href="#top"
-          >
-            <Row center>
-              <Text
-                className={instrument_serif.className}
-                style={{
-                  fontSize: "15px",
-                  color: "#FFF3E8",
-                  letterSpacing: "0.5px",
-                  fontWeight: "600",
-                }}
-              >
-                Good Shepherd Insights, LLC.
-              </Text>
-            </Row>
-          </Button>
-          <Button
-            weight="default"
-            size="l"
-            style={{
-              backdropFilter: "blur(10px)",
-              backgroundColor: "#08151666",
-              border: "1px solid #222",
-              overflow: "hidden",
-              cursor: "default",
-            }}
-          >
-            <Row center>
-              <Text className={inter.className} style={{ fontSize: "12px" }}>
-                <Row center>
-                  <StatusIndicator color="moss" size="m" />
-                  &nbsp;&nbsp;&nbsp;
-                  <ShinyText text="New Onboarding Available"></ShinyText>
-                </Row>
-              </Text>
-            </Row>
-          </Button>
-        </Row>
+        <Row gap="16" className="navbar-buttons">
+           {" "}
+           <Button
+             weight="default"
+             size="l"
+             style={{
+               backdropFilter: "blur(10px)",
+               backgroundColor: "#08151666",
+               border: "1px solid #222",
+               overflow: "hidden",
+             }}
+             href="#top"
+           >
+             <Row center>
+               <Text
+                 className={instrument_serif.className}
+                 style={{
+                   fontSize: "15px",
+                   color: "#FFF3E8",
+                   letterSpacing: "0.5px",
+                   fontWeight: "600",
+                 }}
+               >
+                 Good Shepherd Insights, LLC.
+               </Text>
+             </Row>
+           </Button>
+           <Button
+             weight="default"
+             size="l"
+             style={{
+               backdropFilter: "blur(10px)",
+               backgroundColor: "#08151666",
+               border: "1px solid #222",
+               overflow: "hidden",
+               cursor: "default",
+             }}
+           >
+             <Row center>
+               <Text className={inter.className} style={{ fontSize: "12px" }}>
+                 <Row center>
+                   <StatusIndicator color="moss" size="m" />
+                   &nbsp;&nbsp;&nbsp;
+                   <ShinyText text="New Onboarding Available"></ShinyText>
+                 </Row>
+               </Text>
+             </Row>
+           </Button>
+         </Row>
         <Flex>
           {" "}
           <Magnet magnetStrength={10}>

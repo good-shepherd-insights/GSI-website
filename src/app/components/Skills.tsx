@@ -149,7 +149,7 @@ export default function Skills() {
 
               color: "#fff3e8",
             }}
-            className={instrument_serif.className}
+            className={`${instrument_serif.className} large-text`}
           >
             Our Engineers<br></br>
             <span
@@ -190,6 +190,7 @@ export default function Skills() {
               justifyContent: "center",
             }}
             paddingBottom="m"
+            className="bounce-cards-container"
           >
             <BounceCards
               className="custom-bounceCards"

@@ -74,6 +74,7 @@ export default function Hero() {
         padding="xs"
         paddingX="m"
         gap="104"
+        className="responsive-padding"
       >
         <Waves
           lineColor="#444748"
@@ -90,7 +91,7 @@ export default function Hero() {
         />
         {/* navbar */}
 
-        <Column center maxWidth={70} fillWidth gap="32">
+        <Column center maxWidth={70} fillWidth gap="32" className="responsive-container">
           <Text
             style={{
               color: "#FFF3E8",
@@ -99,6 +100,7 @@ export default function Hero() {
               lineHeight: "1",
               fontWeight: "300",
             }}
+            className="hero-subtitle"
           >
             Business Analyst, Real Partner.
           </Text>
@@ -112,7 +114,7 @@ export default function Hero() {
               display: "inline", // Ensure inline
               whiteSpace: "pre-line", // Preserve line breaks if any
             }}
-            className={instrument_serif.className}
+            className={`${instrument_serif.className} hero-title`}
           >
             bridge process gaps &nbsp;
             <span
@@ -129,7 +131,7 @@ export default function Hero() {
                 showBorder={false}
                 colors={["#99FF33"]}
               >
-                <Text 
+                <Text
                 style={{paddingRight: "13px"}}>
               drive business forward!
               </Text>
@@ -137,7 +139,7 @@ export default function Hero() {
             </span>
           </Text>
 
-          <Flex marginTop="32">
+          <Flex marginTop="32" className="hero-button">
             {" "}
             <Magnet magnetStrength={10}>
               <Button
@@ -181,6 +183,7 @@ export default function Hero() {
             transform: "translateX(-50%)",
             zIndex: 10,
           }}
+          className="responsive-absolute"
         >
           <Dock
             items={items}

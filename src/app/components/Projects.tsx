@@ -62,6 +62,7 @@ export default function Projects() {
         padding="m"
         paddingX="m"
         gap="128"
+        className="responsive-padding"
       >
         <Text className={geist_mono.className} style={{ fontWeight: "200" }}>
           {" "}
@@ -135,7 +136,7 @@ export default function Projects() {
 
               color: "#fff3e8",
             }}
-            className={instrument_serif.className}
+            className={`${instrument_serif.className} large-text`}
           >
             Some selected <br></br>
             <span
@@ -143,7 +144,7 @@ export default function Projects() {
                 fontStyle: "italic",
                 color: "#99FF33",
               }}
-              className={instrument_serif.className}
+              className={`${instrument_serif.className} large-text`}
             >
               Work
             </span>
@@ -157,7 +158,7 @@ export default function Projects() {
           />
           <Flex height={3}></Flex>
 
-          <Grid columns={2} fitWidth gap="160" marginTop="64">
+          <Grid columns={2} fitWidth gap="160" marginTop="64" className="projects-grid">
             <ProjectCards
               title="refolio"
               tags={["Next.js", "Tailwind CSS", "TypeScript"]}
@@ -233,6 +234,7 @@ function ProjectCards({
       border="transparent"
       gap="16"
       paddingBottom="32"
+      className="project-card"
     >
       <Media
         src={image}

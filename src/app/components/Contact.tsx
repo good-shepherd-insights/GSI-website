@@ -178,7 +178,7 @@ export default function Contact() {
 
               color: "#031113",
             }}
-            className={instrument_serif.className}
+            className={`${instrument_serif.className} large-text`}
           >
             Contact <br></br>
             <span
@@ -199,6 +199,7 @@ export default function Contact() {
             fitHeight
             style={{ paddingInline: "25vw" }}
             gap="20"
+            className="contact-form"
           >
             <Input
               id=""
@@ -207,6 +208,7 @@ export default function Contact() {
               style={{ padding: "50px !important" }}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className="contact-input"
             />
             <Textarea
               id=""
@@ -214,6 +216,7 @@ export default function Contact() {
               lines={15}
               value={text}
               onChange={(e) => setText(e.target.value)}
+              className="contact-input"
             />
             <Row fillWidth horizontal="start">
               <Magnet magnetStrength={0}>
