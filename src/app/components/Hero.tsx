@@ -153,7 +153,7 @@ export default function Hero() {
                 }}
                 onClick={() =>
                   window.open(
-                    "https://www.linkedin.com/company/good-shepherd-insights-llc",
+                    "https://goodshepherdinsights.fillout.com/contact",
                     "_blank"
                   )
                 }
