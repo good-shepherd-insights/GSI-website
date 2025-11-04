@@ -18,25 +18,27 @@ interface MenuItemProps {
   text: string;
   image: string;
   desc?: string;
+  disableHover?: boolean;
 }
 
 interface FlowingMenuProps {
   items?: MenuItemProps[];
+  disableHover?: boolean;
 }
 
-const FlowingMenu: React.FC<FlowingMenuProps> = ({ items = [] }) => {
+const FlowingMenu: React.FC<FlowingMenuProps> = ({ items = [], disableHover = false }) => {
   return (
     <div className="menu-wrap">
       <nav className="menu">
         {items.map((item, idx) => (
-          <MenuItem key={idx} {...item} />
+          <MenuItem key={idx} {...item} disableHover={disableHover} />
         ))}
       </nav>
     </div>
   );
 };
 
-const MenuItem: React.FC<MenuItemProps> = ({ link, text, image, desc }) => {
+const MenuItem: React.FC<MenuItemProps> = ({ link, text, image, desc, disableHover = false }) => {
   const itemRef = React.useRef<HTMLDivElement>(null);
   const marqueeRef = React.useRef<HTMLDivElement>(null);
   const marqueeInnerRef = React.useRef<HTMLDivElement>(null);
@@ -105,12 +107,12 @@ const MenuItem: React.FC<MenuItemProps> = ({ link, text, image, desc }) => {
   }, [text, image, desc]);
 
   return (
-    <div className="menu__item" ref={itemRef}>
+    <div className={`menu__item ${disableHover ? 'no-hover' : ''}`} ref={itemRef}>
       <div
         className="menu__item-link"
         onClick={() => window.open(link, "_blank")}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={disableHover ? undefined : handleMouseEnter}
+        onMouseLeave={disableHover ? undefined : handleMouseLeave}
       >
         <Row horizontal="between" fillWidth paddingX="m" vertical="center">
           <div>{text}</div>

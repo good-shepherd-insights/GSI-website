@@ -18,7 +18,7 @@ export default function ScrollTextFooter() {
         <Text className={instrument_serif.className}>
           {" "}
           <ScrollVelocity
-            texts={["✷ Ehhhh, that's the end"]}
+            texts={["UDrive business forward."]}
             velocity={30}
             scrollerStyle={{
               fontFamily: instrument_serif.className,

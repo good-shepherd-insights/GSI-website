@@ -50,7 +50,7 @@
   white-space: nowrap;
   font-weight: 600;
   color: #060010;
-  font-size: 9vh;
+  font-size: 5vh;
   font-weight: 100;
   font-family: "Instrument Serif", serif;
 }
@@ -113,7 +113,7 @@
   background-position: 50% 50%;
 }
 
-.menu__item-link:hover+.marquee {
+.menu__item:not(.no-hover) .menu__item-link:hover+.marquee {
   transform: translate3d(0, 0%, 0);
 }
 

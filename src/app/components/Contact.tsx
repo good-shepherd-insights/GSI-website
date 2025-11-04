@@ -90,10 +90,6 @@ export default function Contact() {
                 className={inter.className}
                 style={{ textTransform: "uppercase" }}
               >
-                CONTACT ME USING THIS FORM&nbsp;
-                <i>
-                  <b>DIRECTLY!</b>
-                </i>
               </Text>{" "}
               <Row>
                 {[
@@ -192,7 +188,7 @@ export default function Contact() {
               }}
               className={instrument_serif.className}
             >
-              Me
+              Us
             </span>
           </Text>
           {/* <Flex height={3}></Flex>

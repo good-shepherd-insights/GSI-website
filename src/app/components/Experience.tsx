@@ -37,35 +37,35 @@ const inter = Inter({
 const demoItems = [
   {
     link: "",
-    text: "CTO",
+    text: "Growth Marketing",
     image: "https://picsum.photos/600/400?random=5",
-    desc: "CTO at Sonamii, leading Next Bench and building with Generative AI. Passionate about AI-agents, open-source, and innovation.",
+    desc: "",
   },
   {
     link: "",
-    text: "Full Stack Developer",
+    text: "Conversion Rate Optimization",
     image: "https://picsum.photos/600/400?random=2",
-    desc: "I'm now a full-stack developer, contributing to open-source projects. My stack includes React, Next.js, TypeScript, Tailwind, etc.",
+    desc: "",
   },
   {
     link: "",
-    text: "Frontend Developer",
+    text: "Business Platform Integrations",
     image: "https://picsum.photos/600/400?random=3",
-    desc: "I'm working as a front-end developer for 5+ years. I also built 30+ awesome UI designs and 50+ websites.",
+    desc: "",
   },
   {
     link: "",
-    text: "Novice",
-    image: "https://picsum.photos/600/400?random=4",
-    desc: "Worked on 20+ real-world projects and participated in several coding challenges and awesome workshops.",
-  },
+    text: "AI & Automation Solutions",
+    image: "https://picsum.photos/600/400?random=6",
+    desc: "",
+  }
 ];
 const eduItems = [
   {
     link: "",
-    text: "High School",
-    image: "https://picsum.photos/600/400?random=13",
-    desc: "DPSV, Vadodara",
+    text: "Business Development",
+    image: "https://picsum.photos/600/400?random=7",
+    desc: "",
   },
   // {
   //   link: "#",
@@ -270,7 +270,7 @@ export default function Experience() {
           />
           <Flex height={3}></Flex>
           <Flex style={{ paddingInline: "13vw" }} fillWidth>
-            <FlowingMenu items={demoItems} />
+            <FlowingMenu items={demoItems} disableHover={true} />
           </Flex>
           <Flex fitHeight center fillWidth paddingY="s">
             {" "}
@@ -290,7 +290,7 @@ export default function Experience() {
           </Flex>
 
           <Flex style={{ paddingInline: "13vw" }} fillWidth>
-            <FlowingMenu items={eduItems} />
+            <FlowingMenu items={eduItems} disableHover={true}/>
           </Flex>
         </Column>
       </Column>{" "}

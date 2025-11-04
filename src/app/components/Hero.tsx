@@ -84,7 +84,7 @@ export default function Hero() {
           waveAmpY={20}
           friction={0.9}
           tension={0.01}
-          maxCursorMove={120}
+          maxCursorMove={0}
           xGap={12}
           yGap={3}
         />
