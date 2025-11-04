@@ -159,7 +159,7 @@ export default function Footer() {
           >
             A Good Shepherd Insights, LLC. Website
           </Text>
-          <Magnet magnetStrength={10}>
+          {/* <Magnet magnetStrength={10}>
             <Button
               weight="default"
               size="m"
@@ -189,7 +189,7 @@ export default function Footer() {
               <span style={{ fontSize: '20px', marginRight: '8px' }}>↩</span>
               &nbsp;Github
             </Button>
-          </Magnet>
+          </Magnet> */}
         </Column>
         <Column fillWidth>
           <Row
@@ -241,7 +241,7 @@ export default function Footer() {
                   textTransform: 'uppercase',
                 }}
               >
-                THANKYOU FOR VISITING
+               
               </Text>
             </Column>
           </Row>
@@ -266,7 +266,7 @@ export default function Footer() {
                 letterSpacing: '0.08em',
               }}
             >
-              ONCE UI
+           
             </Text>
             <Row gap="8" center>
               <SvgSparkle />

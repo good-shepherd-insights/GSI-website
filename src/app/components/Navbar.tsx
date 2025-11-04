@@ -125,7 +125,7 @@ export default function Navbar() {
                 overflow: "hidden",
               }}
               onClick={() =>
-                window.open("") //goto link not open new tab
+                window.open("https://goodshepherdinsights.fillout.com/contact") //goto link not open new tab
               }
             >
               <Text className={inter.className} style={{ fontSize: "12px" }}>
