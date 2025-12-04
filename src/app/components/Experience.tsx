@@ -90,7 +90,7 @@ export default function Experience() {
           minHeight: "100vh",
           minWidth: "100vw",
           boxShadow: "inset 0 25px 25px -25px #1c1c1ccc",
-          backgroundColor: "#F9F4EB",
+          // backgroundColor: "#F9F4EB", // White background commented out
         }}
         vertical="start"
         horizontal="center"
@@ -105,6 +105,7 @@ export default function Experience() {
             width: "100vw",
           }}
         />
+        {/* Dark curved SVG section commented out
         <div
           style={{
             position: "absolute",
@@ -129,6 +130,7 @@ export default function Experience() {
             <path d="M0 180 Q960 -80 1920 180 V0 H0 V180 Z" fill="#031113" />
           </svg>
         </div>
+        */}
         <Column
           fillWidth
           horizontal="center"
@@ -224,6 +226,7 @@ export default function Experience() {
               ))}
             </Row>
           </Row>
+          {/* Our Services section commented out
           <Row
             fillWidth
             horizontal="center"
@@ -292,6 +295,7 @@ export default function Experience() {
           <Flex style={{ paddingInline: "13vw" }} fillWidth className="flowing-menu-container">
             <FlowingMenu items={eduItems} disableHover={true}/>
           </Flex>
+          */}
         </Column>
       </Column>{" "}
     </>

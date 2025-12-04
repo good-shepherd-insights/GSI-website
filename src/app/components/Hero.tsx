@@ -47,11 +47,12 @@ const items = [
     label: "Experience",
     onClick: () => (window.location.href = "#skills"),
   },
-  {
-    icon: <TagIcon size={18} fontWeight={100} />,
-    label: "Services",
-    onClick: () => (window.location.href = "#experiences"),
-  },
+  // Services navigation item commented out
+  // {
+  //   icon: <TagIcon size={18} fontWeight={100} />,
+  //   label: "Services",
+  //   onClick: () => (window.location.href = "#experiences"),
+  // },
   {
     icon: <MessageCircle size={18} />,
     label: "Chat",

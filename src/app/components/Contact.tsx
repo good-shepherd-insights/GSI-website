@@ -67,7 +67,7 @@ export default function Contact() {
         style={{
           minHeight: "fit-content",
           minWidth: "100vw",
-          backgroundColor: "#F9F4EB",
+          // backgroundColor: "#F9F4EB", // White background commented out
         }}
         vertical="start"
         horizontal="center"
@@ -83,6 +83,7 @@ export default function Contact() {
           style={{}}
           id="contact"
         >
+          {/* Contact Us section commented out
           <Flex style={{ paddingInline: "13vw" }} fillWidth>
             {" "}
             <Column fillWidth horizontal="center" paddingBottom="m" gap="20">
@@ -191,9 +192,7 @@ export default function Contact() {
               Us
             </span>
           </Text>
-          {/* <Flex height={3}></Flex>
-                <IoArrowDownSharp color="#7a5a37" size={100} fontWeight={10} />*/}
-          <Flex height={3}></Flex>{" "}
+          <Flex height={3}></Flex>
           <Column
             fillWidth
             fitHeight
@@ -246,6 +245,7 @@ export default function Contact() {
               </Magnet>
             </Row>
           </Column>
+          */}
         </Column>
       </Column>
     </>
