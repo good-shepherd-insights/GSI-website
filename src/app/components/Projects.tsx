@@ -1,6 +1,7 @@
 "use client";
 
 import Magnet from "@/blocks/Animations/Magnet/Magnet";
+import IntegrationAnimation from "@/blocks/Animations/IntegrationAnimation/IntegrationAnimation";
 
 import ScrollVelocity from "@/blocks/TextAnimations/ScrollVelocity/ScrollVelocity";
 import ShinyText from "@/blocks/TextAnimations/ShinyText/ShinyText";
@@ -20,12 +21,8 @@ import {
 import { ArrowUpRight } from "lucide-react";
 
 import { Instrument_Serif, Poppins, Inter, Geist_Mono } from "next/font/google";
-import { useEffect, useRef } from "react";
 
 import { IoArrowDownSharp } from "react-icons/io5";
-import gsap from "gsap";
-
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import React from "react";
 const instrument_serif = Instrument_Serif({
@@ -81,46 +78,9 @@ export default function Projects() {
           ></ScrollVelocity>{" "}
         </Text>
 
-        <Flex
-          center
-          minWidth={48}
-          maxWidth={48}
-          maxHeight={29}
-          minHeight={29}
-          style={{
-            backgroundColor: "#9887FF",
-            boxShadow: "inset 0 25px 25px -25px #1d1d1d",
-            borderRadius: "40px",
-            border: "1.2px solid #999",
-          }}
-        >
-          <Text
-            style={{
-              fontSize: "85px",
-              textAlign: "center",
-              lineHeight: "1.1",
-              fontWeight: "lighter",
-              display: "inline", // Ensure inline
-              whiteSpace: "pre-line", // Preserve line breaks if any
-              color: "#031113",
-            }}
-            className={instrument_serif.className}
-          >
-            Business Development Agency <br/>{" "}
-            <span
-              style={{
-                fontStyle: "italic",
-                display: "inline",
-                fontWeight: 700,
-              }}
-              className={instrument_serif.className}
-            >
-              Frederick, MD
-            </span>
-          </Text>
-        </Flex>
+        <IntegrationAnimation />
 
-        <Column
+        {/* <Column
           fillWidth
           horizontal="center"
           vertical="start"
@@ -200,7 +160,7 @@ export default function Projects() {
               </Text>
             </Button>
           </Magnet>
-        </Column>
+        </Column> */}
       </Column>
     </>
   );

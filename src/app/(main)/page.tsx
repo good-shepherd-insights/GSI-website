@@ -28,9 +28,10 @@ export default function Home() {
       >
         <Navbar />
         <Hero />
+        <Skills />
         <Column fillWidth id="projectandskills">
           <LocoScrollImg />
-          <Projects /> <Skills />
+          <Projects />
         </Column>
         <Column fillWidth id="experiencesandcontact">
           <LocoScrollFlatImg />

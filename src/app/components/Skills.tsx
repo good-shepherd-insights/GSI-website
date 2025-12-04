@@ -151,7 +151,7 @@ export default function Skills() {
             }}
             className={`${instrument_serif.className} large-text`}
           >
-            Our Engineers<br></br>
+            Our Integration<br></br>
             <span
               style={{
                 fontStyle: "italic",

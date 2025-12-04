@@ -1,0 +1,68 @@
+.integration-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.integration-animation svg {
+  filter: drop-shadow(0 0 20px rgba(153, 255, 51, 0.15));
+}
+
+/* Node styling */
+.integration-animation .nodes circle {
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.integration-animation .nodes circle:hover {
+  filter: url(#glow) brightness(1.3);
+}
+
+/* Connection lines */
+.integration-animation .connections line {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Particles */
+.integration-animation .particles circle {
+  pointer-events: none;
+}
+
+/* Glows */
+.integration-animation .glows circle {
+  pointer-events: none;
+}
+
+/* Integration symbol animation */
+.integration-animation .integration-symbol path {
+  animation: symbolPulse 3s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
+
+@keyframes symbolPulse {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .integration-animation {
+    max-width: 300px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .integration-animation {
+    max-width: 250px;
+    padding: 0.5rem;
+  }
+}
