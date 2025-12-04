@@ -5,6 +5,7 @@ import Waves from "@/blocks/Backgrounds/Waves/Waves";
 import Dock from "@/blocks/Components/Dock/Dock";
 import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 import ShinyText from "@/blocks/TextAnimations/ShinyText/ShinyText";
+import PlugAnimation from "@/blocks/Animations/PlugAnimation/PlugAnimation";
 
 import { Text, Button, Column, Row, Flex } from "@once-ui-system/core";
 import {
@@ -142,36 +143,38 @@ export default function Hero() {
           <Flex marginTop="32" className="hero-button">
             {" "}
             <Magnet magnetStrength={10}>
-              <Button
-                weight="default"
-                size="l"
-                style={{
-                  backdropFilter: "blur(10px)",
-                  backgroundColor: "#08151666",
-                  border: "1px solid #222",
-                  padding: "27px",
-                  borderRadius: "1000px",
-                  overflow: "hidden",
-                }}
-                onClick={() =>
-                  window.open(
-                    "https://goodshepherdinsights.fillout.com/contact",
-                    "_blank"
-                  )
-                }
-              >
-                <Text className={inter.className} style={{ fontSize: "12px" }}>
-                  <Row center>
-                    <ShinyText text="LET'S WORK TOGETHER"></ShinyText>
-                    &nbsp;&nbsp;&nbsp;
-                    <ArrowUpRight
-                      size={19}
-                      color={"#99FF33"}
-                      fontWeight={100}
-                    />
-                  </Row>
-                </Text>
-              </Button>
+              <PlugAnimation>
+                <Button
+                  weight="default"
+                  size="l"
+                  style={{
+                    backdropFilter: "blur(10px)",
+                    backgroundColor: "#08151666",
+                    border: "1px solid #222",
+                    padding: "27px",
+                    borderRadius: "1000px",
+                    overflow: "hidden",
+                  }}
+                  onClick={() =>
+                    window.open(
+                      "https://goodshepherdinsights.fillout.com/contact",
+                      "_blank"
+                    )
+                  }
+                >
+                  <Text className={inter.className} style={{ fontSize: "12px" }}>
+                    <Row center>
+                      <ShinyText text="LET'S WORK TOGETHER"></ShinyText>
+                      &nbsp;&nbsp;&nbsp;
+                      <ArrowUpRight
+                        size={19}
+                        color={"#99FF33"}
+                        fontWeight={100}
+                      />
+                    </Row>
+                  </Text>
+                </Button>
+              </PlugAnimation>
             </Magnet>
           </Flex>
         </Column>
