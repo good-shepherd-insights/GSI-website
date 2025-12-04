@@ -34,8 +34,10 @@ export default function Home() {
         </Column>
         <Column fillWidth id="experiencesandcontact">
           <LocoScrollFlatImg />
-          <Experience />
-          <Contact />
+          {/* Experience section (dark section under Skills) commented out */}
+          {/* <Experience /> */}
+          {/* Contact section commented out */}
+          {/* <Contact /> */}
            <ScrollTextFooter />
         </Column>
         <Footer />
@@ -102,7 +104,7 @@ function LocoScrollImg() {
           const baseGap = 30; // percent
           const offset = side === "left" ? 10 : 20;
           const top = `${offset + idx * baseGap}%`;
-          const size = 138 + speedFactors[idx] * 85; // px
+          const size = (138 + speedFactors[idx] * 85) / 3; // Scaled down by 300% (1/3 size)
           return (
             <img
               key={side + "-" + img.src + "-" + idx}
@@ -135,14 +137,14 @@ function LocoScrollImg() {
 function LocoScrollFlatImg() {
   gsap.registerPlugin(ScrollTrigger);
 
-  // 6 images, 3 per side, fixed order
+  // 6 images, 3 per side, fixed order - Flower SVGs commented out
   const images = [
-    { src: "/shape1.svg", alt: "Shape 1" },
-    { src: "/shape2.svg", alt: "Shape 2" },
-    { src: "/shape3.svg", alt: "Shape 3" },
-    { src: "/shape4.svg", alt: "Shape 4" },
-    { src: "/shape5.svg", alt: "Shape 5" },
-    { src: "/shape1.svg", alt: "Shape 6" },
+    // { src: "/shape1.svg", alt: "Shape 1" }, // Flower SVG commented out
+    // { src: "/shape2.svg", alt: "Shape 2" }, // Flower SVG commented out  
+    // { src: "/shape3.svg", alt: "Shape 3" }, // Flower SVG commented out
+    // { src: "/shape4.svg", alt: "Shape 4" }, // Flower SVG commented out
+    // { src: "/shape5.svg", alt: "Shape 5" }, // Flower SVG commented out
+    // { src: "/shape1.svg", alt: "Shape 6" }, // Flower SVG commented out
   ];
   const count = 3;
   const sides = ["left", "right"];
