@@ -3,66 +3,227 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 2/1;
+  position: relative;
+  margin: 0 auto;
 }
 
-.integration-animation svg {
-  filter: drop-shadow(0 0 20px rgba(153, 255, 51, 0.15));
+.integration-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 0 30px rgba(153, 255, 51, 0.2));
 }
 
 /* Node styling */
 .integration-animation .nodes circle {
   cursor: pointer;
   transition: filter 0.3s ease;
+  will-change: transform, opacity;
 }
 
 .integration-animation .nodes circle:hover {
-  filter: url(#glow) brightness(1.3);
+  filter: url(#hubGlow) brightness(1.3);
+}
+
+/* Hub nodes have stronger presence */
+.integration-animation .node-hub {
+  filter: url(#hubGlow);
+}
+
+.integration-animation .node-secondary {
+  filter: url(#glow);
+}
+
+.integration-animation .node-tertiary {
+  filter: url(#glow);
 }
 
 /* Connection lines */
 .integration-animation .connections line {
   stroke-linecap: round;
   stroke-linejoin: round;
+  will-change: stroke-dashoffset, opacity;
 }
 
-/* Particles */
-.integration-animation .particles circle {
+.connection-line {
+  transition: stroke-width 0.3s ease;
+}
+
+.connection-line:hover {
+  stroke-width: 3;
+}
+
+/* Flow particles */
+.integration-animation .flow-particles circle {
   pointer-events: none;
+  will-change: cx, cy, opacity;
+}
+
+.flow-particle {
+  mix-blend-mode: screen;
+}
+
+/* Floating particles */
+.integration-animation .floating-particles circle {
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.floating-particle {
+  mix-blend-mode: screen;
 }
 
 /* Glows */
 .integration-animation .glows circle {
   pointer-events: none;
+  will-change: transform, opacity;
 }
 
-/* Integration symbol animation */
-.integration-animation .integration-symbol path {
-  animation: symbolPulse 3s ease-in-out infinite;
-  animation-delay: 2.5s;
+/* Pulse rings */
+.integration-animation .pulse-rings circle {
+  pointer-events: none;
+  will-change: transform, opacity;
 }
 
-@keyframes symbolPulse {
+/* Integration symbol styling */
+.integration-animation .integration-symbol {
+  will-change: transform, opacity;
+}
+
+.integration-animation .integration-symbol .symbol-outer {
+  animation: symbolOuterPulse 4s ease-in-out infinite;
+}
+
+.integration-animation .integration-symbol .symbol-inner {
+  animation: symbolInnerPulse 3s ease-in-out infinite;
+}
+
+@keyframes symbolOuterPulse {
+  0%, 100% {
+    opacity: 0.8;
+    stroke-width: 1.5;
+  }
+  50% {
+    opacity: 1;
+    stroke-width: 2;
+  }
+}
+
+@keyframes symbolInnerPulse {
   0%, 100% {
     opacity: 0.9;
     transform: scale(1);
   }
   50% {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.1);
+  }
+}
+
+/* Outer ring rotation handled by JS, but add subtle opacity animation */
+#outer-ring {
+  animation: ringPulse 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes ringPulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Scroll-based enhancements */
+.integration-animation[data-scroll-direction="down"] .nodes circle {
+  transition-timing-function: ease-out;
+}
+
+.integration-animation[data-scroll-direction="up"] .nodes circle {
+  transition-timing-function: ease-in;
+}
+
+/* Hover effects for the entire component */
+.integration-animation:hover .integration-svg {
+  filter: drop-shadow(0 0 40px rgba(153, 255, 51, 0.3));
+}
+
+.integration-animation:hover .node-hub {
+  filter: url(#hubGlow) brightness(1.1);
+}
+
+/* Performance optimization - use GPU acceleration */
+.integration-animation .nodes circle,
+.integration-animation .connections line,
+.integration-animation .flow-particles circle,
+.integration-animation .floating-particles circle,
+.integration-animation .glows circle,
+.integration-animation .pulse-rings circle,
+.integration-animation .integration-symbol {
+  transform: translateZ(0);
+}
+
+/* Accessibility - respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .integration-animation .integration-symbol .symbol-outer,
+  .integration-animation .integration-symbol .symbol-inner,
+  #outer-ring {
+    animation: none;
+  }
+  
+  .integration-animation .nodes circle,
+  .integration-animation .connections line,
+  .integration-animation .flow-particles circle,
+  .integration-animation .floating-particles circle {
+    transition: none;
   }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .integration-animation {
-    max-width: 300px;
-    padding: 1rem;
+    max-width: 320px;
+    padding: 1.5rem;
+  }
+  
+  .integration-svg {
+    filter: drop-shadow(0 0 20px rgba(153, 255, 51, 0.15));
   }
 }
 
 @media (max-width: 480px) {
   .integration-animation {
-    max-width: 250px;
-    padding: 0.5rem;
+    max-width: 280px;
+    padding: 1rem;
+  }
+  
+  .integration-svg {
+    filter: drop-shadow(0 0 15px rgba(153, 255, 51, 0.1));
+  }
+}
+
+/* Dark mode optimization - enhance glow effects */
+@media (prefers-color-scheme: dark) {
+  .integration-svg {
+    filter: drop-shadow(0 0 35px rgba(153, 255, 51, 0.25));
+  }
+  
+  .integration-animation:hover .integration-svg {
+    filter: drop-shadow(0 0 50px rgba(153, 255, 51, 0.35));
+  }
+}
+
+/* Light mode - reduce glow intensity */
+@media (prefers-color-scheme: light) {
+  .integration-svg {
+    filter: drop-shadow(0 0 20px rgba(102, 170, 0, 0.2));
+  }
+  
+  .integration-animation:hover .integration-svg {
+    filter: drop-shadow(0 0 30px rgba(102, 170, 0, 0.3));
   }
 }

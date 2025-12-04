@@ -1,0 +1,134 @@
+/* Building Growth Animation - Clean Outline Style */
+
+.building-growth-animation {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.building-growth-svg {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 300px;
+}
+
+/* All SVG elements use outline style by default */
+.building-growth-svg line,
+.building-growth-svg rect,
+.building-growth-svg polyline,
+.building-growth-svg polygon,
+.building-growth-svg circle,
+.building-growth-svg path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Building groups */
+#small-building-group,
+#enterprise-building-group {
+  will-change: opacity, transform;
+}
+
+/* Ground line styling */
+#ground-line {
+  opacity: 0.7;
+}
+
+/* Small building elements */
+#small-base,
+#small-left-wall,
+#small-right-wall,
+#small-roof-left,
+#small-roof-right,
+#small-door,
+#small-chimney,
+#small-sign-post,
+#small-sign-board,
+.small-window {
+  will-change: stroke-dashoffset;
+}
+
+/* Enterprise building elements */
+#enterprise-base,
+#enterprise-left-wall,
+#enterprise-right-wall,
+#enterprise-roof,
+#enterprise-door,
+#enterprise-door-line,
+#enterprise-spire,
+#enterprise-spire-top,
+#enterprise-logo,
+.enterprise-floor,
+.enterprise-window {
+  will-change: stroke-dashoffset, opacity;
+}
+
+/* Growth arrow styling */
+#growth-arrow {
+  will-change: stroke-dashoffset, opacity, transform;
+}
+
+/* Subtle glow effect on hover for the whole animation */
+.building-growth-animation:hover .building-growth-svg {
+  filter: drop-shadow(0 0 4px rgba(153, 255, 51, 0.3));
+  transition: filter 0.3s ease;
+}
+
+/* Ensure crisp rendering */
+.building-growth-svg * {
+  shape-rendering: geometricPrecision;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .building-growth-animation {
+    min-height: 220px;
+  }
+  
+  .building-growth-svg {
+    max-width: 320px;
+    max-height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .building-growth-animation {
+    min-height: 180px;
+  }
+  
+  .building-growth-svg {
+    max-width: 260px;
+    max-height: 200px;
+  }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .building-growth-svg * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  #small-building-group,
+  #enterprise-building-group,
+  #growth-arrow {
+    opacity: 1 !important;
+  }
+  
+  .building-growth-svg line,
+  .building-growth-svg rect,
+  .building-growth-svg polyline,
+  .building-growth-svg polygon,
+  .building-growth-svg circle {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
