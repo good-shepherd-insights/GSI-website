@@ -27,43 +27,27 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const images_row1 = [
-  "https://skillicons.dev/icons?i=html",
-  "https://skillicons.dev/icons?i=css",
-  "https://skillicons.dev/icons?i=javascript",
-  "https://skillicons.dev/icons?i=typescript",
-  "https://skillicons.dev/icons?i=react",
-  "https://skillicons.dev/icons?i=threejs",
-  "https://skillicons.dev/icons?i=p5js",
-
-  "https://skillicons.dev/icons?i=vercel",
-  "https://skillicons.dev/icons?i=tailwind",
-  "https://skillicons.dev/icons?i=bootstrap",
+  "https://www.svgrepo.com/show/354472/twilio-icon.svg",
+  "https://www.svgrepo.com/show/354341/shopify.svg",
+  "https://www.svgrepo.com/show/331433/hubspot.svg",
+  "https://www.svgrepo.com/show/354401/stripe.svg",
+  "https://www.svgrepo.com/show/331269/zendesk.svg",
 ];
 
 const images_row2 = [
-  "https://skillicons.dev/icons?i=firebase",
-  "https://skillicons.dev/icons?i=python",
-  "https://skillicons.dev/icons?i=supabase",
-  "https://skillicons.dev/icons?i=mysql",
-  "https://skillicons.dev/icons?i=java",
-  "https://skillicons.dev/icons?i=bun",
-  "https://skillicons.dev/icons?i=figma",
-  "https://skillicons.dev/icons?i=obsidian",
-  "https://skillicons.dev/icons?i=vue",
-  "https://skillicons.dev/icons?i=angular",
+  "https://www.svgrepo.com/show/376356/aws.svg",
+  "https://www.svgrepo.com/show/448223/gcp.svg",
+  "https://www.svgrepo.com/show/353978/kong-icon.svg",
+  "https://www.svgrepo.com/show/448274/azure.svg",
+  "https://www.svgrepo.com/show/354152/oracle.svg",
 ];
 
 const images_row3 = [
-  "https://skillicons.dev/icons?i=rabbitmq",
-  "https://skillicons.dev/icons?i=django",
-  "https://skillicons.dev/icons?i=docker",
-  "https://skillicons.dev/icons?i=dotnet",
-  "https://skillicons.dev/icons?i=anaconda",
-  "https://skillicons.dev/icons?i=git",
-  "https://skillicons.dev/icons?i=npm",
-  "https://skillicons.dev/icons?i=robloxstudio",
-  "https://skillicons.dev/icons?i=vscode",
-  "https://skillicons.dev/icons?i=bash",
+  "https://www.svgrepo.com/show/354596/zapier-icon.svg",
+  "https://www.svgrepo.com/show/452241/jira.svg",
+  "https://www.svgrepo.com/show/353383/airtable.svg",
+  "https://www.svgrepo.com/show/353425/asana.svg",
+  "https://www.svgrepo.com/show/353908/intercom-icon.svg",
 ];
 
 const images_row4 = [
@@ -151,7 +135,7 @@ export default function Skills() {
             }}
             className={`${instrument_serif.className} large-text`}
           >
-            Our Integration<br></br>
+            Our Integrations<br></br>
             <span
               style={{
                 fontStyle: "italic",
@@ -160,7 +144,7 @@ export default function Skills() {
               }}
               className={instrument_serif.className}
             >
-              Skillsets
+              Experience
             </span>
           </Text>
           <Flex height={4}></Flex>
@@ -240,7 +224,7 @@ export default function Skills() {
                   borderRadius: "1000px",
                 }}
                 onClick={() =>
-                  window.open("https://github.com/goodshepherdinsights", "_blank")
+                  window.open("https://goodshepherdinsights.fillout.com/contact", "_blank")
                 }
               >
                 <Text className={inter.className} style={{ fontSize: "12px" }}>
