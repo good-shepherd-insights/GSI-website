@@ -51,28 +51,11 @@ const images_row3 = [
 ];
 
 const images_row4 = [
-  "https://skillicons.dev/icons?i=codepen",
-  "https://skillicons.dev/icons?i=arduino",
-  "https://skillicons.dev/icons?i=flask",
-  "https://skillicons.dev/icons?i=gcp",
-  "https://skillicons.dev/icons?i=git",
-  "https://skillicons.dev/icons?i=npm",
-  "https://skillicons.dev/icons?i=discord",
-  "https://skillicons.dev/icons?i=gitlab",
-  "https://skillicons.dev/icons?i=pnpm",
+  ""
 ];
 
 const images_row5 = [
-  "https://skillicons.dev/icons?i=gherkin",
-  "https://skillicons.dev/icons?i=graphql",
-  "https://skillicons.dev/icons?i=htmx",
-  "https://skillicons.dev/icons?i=md",
-  "https://skillicons.dev/icons?i=matlab",
-  "https://skillicons.dev/icons?i=mongodb",
-  "https://skillicons.dev/icons?i=nextjs",
-  "https://skillicons.dev/icons?i=tensorflow",
-  "https://skillicons.dev/icons?i=terraform",
-  "https://skillicons.dev/icons?i=nodejs",
+  ""
 ];
 
 const getTransformStyles = (images: string[]) =>
@@ -165,6 +148,20 @@ export default function Skills() {
                 />
               </div> */}
 
+          <style>
+            {`
+              @media (max-width: 768px) {
+                .desktop-only { display: none !important; }
+                .mobile-only { display: flex !important; flexDirection: column; gap: 24px; width: 100%; align-items: center; }
+                .mobile-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; width: 100%; }
+                .mobile-icon { width: 60px; height: 60px; object-fit: contain; background: white; border-radius: 12px; padding: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+              }
+              @media (min-width: 769px) {
+                .mobile-only { display: none !important; }
+              }
+            `}
+          </style>
+
           <Column
             fillWidth
             center
@@ -177,7 +174,7 @@ export default function Skills() {
             className="bounce-cards-container"
           >
             <BounceCards
-              className="custom-bounceCards"
+              className="custom-bounceCards desktop-only"
               images={images_row1}
               containerWidth={500}
               containerHeight={250}
@@ -188,7 +185,7 @@ export default function Skills() {
               enableHover={false}
             />
             <BounceCards
-              className="custom-bounceCards"
+              className="custom-bounceCards desktop-only"
               images={images_row2}
               containerWidth={500}
               containerHeight={250}
@@ -199,7 +196,7 @@ export default function Skills() {
               enableHover={false}
             />
             <BounceCards
-              className="custom-bounceCards"
+              className="custom-bounceCards desktop-only"
               images={images_row3}
               containerWidth={500}
               containerHeight={250}
@@ -209,6 +206,15 @@ export default function Skills() {
               transformStyles={transformStyles_row3}
               enableHover={false}
             />
+
+            <div className="mobile-only">
+              <div className="mobile-grid">
+                {[...images_row1, ...images_row2, ...images_row3].map((src, i) => (
+                  <img key={i} src={src} className="mobile-icon" alt={`skill-${i}`} />
+                ))}
+              </div>
+            </div>
+
             <Flex height={2}></Flex>
             <Magnet magnetStrength={10}>
               <Button
