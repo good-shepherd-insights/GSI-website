@@ -39,30 +39,7 @@ export default function Footer() {
             width: '100vw',
           }}
         />
-        <div
-          style={{
-            position: 'absolute',
-            width: '100vw',
-            height: '180px',
-            top: 0,
-            left: 0,
-            zIndex: 2,
-            pointerEvents: 'none',
-            overflow: 'hidden',
-          }}
-        >
-          <svg
-            width="100%"
-            height="100%"
-            viewBox="0 0 1920 180"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ display: 'block' }}
-            preserveAspectRatio="none"
-          >
-            <path d="M0 180 Q960 -80 1920 180 V0 H0 V180 Z" fill="#f9f4eb" />
-          </svg>
-        </div>
+
         <Text variant="code-default-s" className={geist_mono.className}>
           {' '}
           <Row
@@ -241,7 +218,7 @@ export default function Footer() {
                   textTransform: 'uppercase',
                 }}
               >
-               
+
               </Text>
             </Column>
           </Row>
@@ -266,7 +243,7 @@ export default function Footer() {
                 letterSpacing: '0.08em',
               }}
             >
-           
+
             </Text>
             <Row gap="8" center>
               <SvgSparkle />

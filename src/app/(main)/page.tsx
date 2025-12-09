@@ -9,11 +9,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
-import Experience from "../components/Experience";
-import Contact from "../components/Contact";
-
 import Footer from "../components/Footer";
-import ScrollTextFooter from "../components/ScrollTextFooter";
 import { Column } from "@once-ui-system/core";
 
 export default function Home() {
@@ -33,14 +29,7 @@ export default function Home() {
           {/* <LocoScrollImg /> */}
           <Projects />
         </Column>
-        <Column fillWidth id="experiencesandcontact">
-          <LocoScrollFlatImg />
-          {/* Experience section (dark section under Skills) commented out */}
-          {/* <Experience /> */}
-          {/* Contact section commented out */}
-          {/* <Contact /> */}
-          <ScrollTextFooter />
-        </Column>
+
         <Footer />
       </ClickSpark>
     </>
