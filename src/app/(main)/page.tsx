@@ -30,7 +30,7 @@ export default function Home() {
         <Hero />
         <Skills />
         <Column fillWidth id="projectandskills">
-          <LocoScrollImg />
+          {/* <LocoScrollImg /> */}
           <Projects />
         </Column>
         <Column fillWidth id="experiencesandcontact">
@@ -39,7 +39,7 @@ export default function Home() {
           {/* <Experience /> */}
           {/* Contact section commented out */}
           {/* <Contact /> */}
-           <ScrollTextFooter />
+          <ScrollTextFooter />
         </Column>
         <Footer />
       </ClickSpark>
@@ -140,7 +140,7 @@ function LocoScrollFlatImg() {
 
   // 6 images, 3 per side, fixed order - Flower SVGs commented out
   const images = [
- { src: "/", alt: "1" }, // Flower SVG commented out
+    { src: "/", alt: "1" }, // Flower SVG commented out
     // { src: "/shape2.svg", alt: "Shape 2" }, // Flower SVG commented out  
     // { src: "/shape3.svg", alt: "Shape 3" }, // Flower SVG commented out
     // { src: "/shape4.svg", alt: "Shape 4" }, // Flower SVG commented out

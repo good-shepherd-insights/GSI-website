@@ -1,7 +1,7 @@
 "use client";
 
 import Magnet from "@/blocks/Animations/Magnet/Magnet";
-import BuildingGrowthAnimation from "@/blocks/Animations/BuildingGrowthAnimation/BuildingGrowthAnimation";
+import SpinningGears from "@/blocks/Animations/SpinningGears/SpinningGears";
 
 import ScrollVelocity from "@/blocks/TextAnimations/ScrollVelocity/ScrollVelocity";
 import ShinyText from "@/blocks/TextAnimations/ShinyText/ShinyText";
@@ -78,7 +78,7 @@ export default function Projects() {
           ></ScrollVelocity>{" "}
         </Text>
 
-        <BuildingGrowthAnimation />
+        <SpinningGears />
 
         {/* <Column
           fillWidth
